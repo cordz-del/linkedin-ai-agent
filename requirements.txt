@@ -1,0 +1,4 @@
+openai
+linkedin-api
+schedule
+requests
