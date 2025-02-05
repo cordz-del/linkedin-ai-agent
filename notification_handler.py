@@ -9,9 +9,9 @@ EMAIL_USERNAME = 'your_email@gmail.com'
 EMAIL_PASSWORD = 'your_email_password'
 
 # Twilio configuration
-TWILIO_ACCOUNT_SID = 'your_twilio_account_sid'
-TWILIO_AUTH_TOKEN = 'your_twilio_auth_token'
-TWILIO_PHONE_NUMBER = '+1234567890'
+TWILIO_ACCOUNT_SID = 'yourTWILIO_ACCOUNT_SID = os.getenv("TWILIO_ACCOUNT_SID")
+TWILIO_AUTH_TOKEN = os.getenv("TWILIO_AUTH_TOKEN")
+TWILIO_PHONE_NUMBER = '+123TWILIO_PHONE_NUMBER = os.getenv("TWILIO_PHONE_NUMBER")
 
 # Notification recipient
 RECIPIENT_EMAIL = 'r.aarongraham.wv@gmail.com'
