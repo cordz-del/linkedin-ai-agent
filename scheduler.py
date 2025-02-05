@@ -1,7 +1,9 @@
 import schedule
 import time
+from flask import Flask
 from automation import LinkedInAutomation
 
+app = Flask(__name__)
 automation = LinkedInAutomation()
 
 schedule.every().day.at("08:00").do(automation.post_on_linkedin)
@@ -12,6 +14,12 @@ schedule.every().friday.at("10:00").do(automation.generate_weekly_article)
 schedule.every().day.at("18:00").do(automation.find_hiring_professionals)
 schedule.every().day.at("20:00").do(automation.celebrate_milestones)
 
-while True:
-    schedule.run_pending()
-    time.sleep(60)
+@app.route('/')
+def run_scheduler():
+    while True:
+        schedule.run_pending()
+        time.sleep(60)
+    return "Scheduler is running"
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8080)
