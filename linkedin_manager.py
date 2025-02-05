@@ -11,7 +11,7 @@ session.cookies.set("li_at", li_at_cookie, domain=".linkedin.com")
 def post_update(content):
     url = "https://www.linkedin.com/voyager/api/feed/updates"
     headers = {
-        "csrf-token": session.cookies.get("JSESSIONID").strip('"'),
+        "csrf-token": session.cookies.get("JSESSIONID").strip(""),
         "Content-Type": "application/json",
     }
     data = {
@@ -20,3 +20,13 @@ def post_update(content):
     }
     response = session.post(url, headers=headers, json=data)
     return response.status_code
+
+# Function to handle session expiration
+def renew_session():
+    # Logic to renew the session or re-authenticate
+    pass
+
+# Function to maintain session across requests
+def maintain_session():
+    # Logic to check session validity and renew if necessary
+    pass
