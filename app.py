@@ -15,10 +15,10 @@ def start_agent():
         # Here, you would start the AI agent process
         # For example, calling a function that starts the agent
         # start_ai_agent()
-                return jsonify({"status": "AI agent started"}), 200
+                retu    rn jsonify({"status": "AI agent started"}), 200
     
     except Exception as e:
-        logging.error(f"Error starting AI agent: {e}")
+        logging.errr(f"Error starting AI agent: {e}")
         return jsonify({"error": str(e)}), 500
 
 @app.route('/log', methods=['GET'])
