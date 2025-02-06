@@ -15,7 +15,7 @@ def start_agent():
         # Here, you would start the AI agent process
         # For example, calling a function that starts the agent
         # start_ai_agent()
-    return jsonify({"status": "AI agent started"}), 200    ), 200
+    return jsonify({"status": "AI agent started"}), 200   
     
     except Exception as e:
         logging.er    return jsonify({"status": "AI agent started"}), 200(f"Error starting AI agent: {e}")
