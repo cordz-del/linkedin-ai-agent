@@ -22,6 +22,6 @@ def run_scheduler():
         time.sleep(60)
     return "Scheduler is running"
 
-if __name__print("Port:", os.environ.get('PORT', 8080))
+if __name__print("Port:", os.environ.get('PORT', 8080)
  == "__main__":)
 app.run(host="0.0.0.0", port=os.environ.get('PORT', 8080))
